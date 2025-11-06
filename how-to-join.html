@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Как присоединиться - Forgotten Legends</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Стили только для этой страницы */
+        .join-hero {
+            background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.9)), url('https://via.placeholder.com/1920x600') no-repeat center center/cover;
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+
+            .join-hero h1 {
+                font-size: 3rem;
+                margin-bottom: 1rem;
+                background: linear-gradient(90deg, #ff8a00, #e52e71);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+            }
+
+            .join-hero p {
+                font-size: 1.2rem;
+                color: #cccccc;
+                max-width: 600px;
+                margin: 0 auto;
+            }
+
+        .join-content {
+            padding: 4rem 0;
+            background-color: #111111;
+        }
+
+        .steps-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .step-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+            border-left: 4px solid #ff8a00;
+        }
+
+            .step-card:hover {
+                transform: translateY(-10px);
+                background: rgba(255, 255, 255, 0.08);
+            }
+
+        .step-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .step-number {
+            background: linear-gradient(90deg, #ff8a00, #e52e71);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-weight: bold;
+        }
+
+        .step-card h3 {
+            color: #ff8a00;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .step-card p {
+            color: #cccccc;
+            margin-bottom: 1rem;
+        }
+
+        /* Секция Discord */
+        .discord-section {
+            background: linear-gradient(135deg, #5865F2, #4752c4);
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+            .discord-section h2 {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .discord-section p {
+                font-size: 1.2rem;
+                margin-bottom: 2rem;
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+        .discord-widget {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem auto;
+            max-width: 500px;
+        }
+
+        .discord-icon-large {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .discord-link {
+            display: inline-block;
+            background: white;
+            color: #5865F2;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: transform 0.3s;
+            margin-top: 1rem;
+        }
+
+            .discord-link:hover {
+                transform: translateY(-3px);
+            }
+
+        /* Секция с IP-адресом */
+        .server-ip-section {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .ip-address {
+            background: #0a0a0a;
+            padding: 1.5rem;
+            border-radius: 10px;
+            font-family: monospace;
+            font-size: 1.5rem;
+            margin: 1rem 0;
+            border: 2px solid #ff8a00;
+            display: inline-block;
+            min-width: 300px;
+        }
+
+        .copy-btn {
+            background: #ff8a00;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+            margin-left: 1rem;
+        }
+
+            .copy-btn:hover {
+                background: #e52e71;
+            }
+
+        /* Секция помощи */
+        .help-section {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 3rem;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+            .help-section h2 {
+                color: #ff8a00;
+                margin-bottom: 2rem;
+            }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            text-align: left;
+            border-left: 4px solid #e52e71;
+        }
+
+            .faq-item h4 {
+                color: #ff8a00;
+                margin-bottom: 0.5rem;
+            }
+
+        /* Кнопка загрузки */
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(90deg, #4CAF50, #45a049);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+            .download-btn:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+                color: white;
+                text-decoration: none;
+            }
+
+        /* Кнопка регистрации */
+        .register-btn {
+            display: inline-block;
+            background: linear-gradient(90deg, #2196F3, #1976D2);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+            .register-btn:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 5px 15px rgba(33, 150, 243, 0.4);
+                color: white;
+                text-decoration: none;
+            }
+
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .join-hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .ip-address {
+                font-size: 1.2rem;
+                display: block;
+                margin-bottom: 1rem;
+            }
+
+            .copy-btn {
+                margin-left: 0;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-with-fire">
+                    <!-- Эффект искр -->
+                    <div class="fire-sparks">
+                        <div class="spark" style="top: 10px; left: 15px; animation-delay: 0s;"></div>
+                        <div class="spark" style="top: 5px; left: 25px; animation-delay: 0.5s;"></div>
+                        <div class="spark" style="top: 15px; left: 35px; animation-delay: 1s;"></div>
+                        <div class="spark" style="top: 8px; left: 45px; animation-delay: 1.5s;"></div>
+                    </div>
+
+                    <!-- Основная иконка -->
+                    <div class="logo-icon-fire"></div>
+
+                    <!-- Текст -->
+                    <h1 class="logo-text-fire">ForgottenLegends</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="rules.html">Правила</a></li>
+                        <li><a href="how-to-join.html" class="active">Как присоединиться</a></li>
+                        <li><a href="#">Галерея</a></li>
+                    </ul>
+                </nav>
+                <a href="https://discord.gg/forgottenlegends" class="discord-btn-custom" target="_blank">
+                    <span class="discord-icon-custom"></span> Discord
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Герой секция -->
+    <section class="join-hero">
+        <div class="container">
+            <h1>Как присоединиться к серверу</h1>
+            <p>Простая инструкция для новичков. Всего несколько шагов отделяют вас от увлекательной игры!</p>
+        </div>
+    </section>
+
+    <!-- Основной контент -->
+    <section class="join-content">
+        <div class="container">
+            <!-- Шаги подключения -->
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-icon">📥</div>
+                    <div class="step-number">1</div>
+                    <h3>Скачайте игру</h3>
+                    <p>Убедитесь, что у вас установлена последняя версия игры. Если нет - скачайте с сайта FPlay.</p>
+                    <p><small>Требуемая версия: 1.21.5</small></p>
+                    <a href="https://fplay.su/vs" class="download-btn" target="_blank">Скачать игру</a>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-icon">📝</div>
+                    <div class="step-number">2</div>
+                    <h3>Зарегистрируйтесь</h3>
+                    <p>Создайте аккаунт на сайте FPlay чтобы получить доступ к серверу и дополнительным возможностям.</p>
+                    <p><small>Регистрация бесплатна и занимает 1 минуту</small></p>
+                    <a href="https://fplay.su/wp-login.php?action=register" class="register-btn" target="_blank">
+                        📝 Зарегистрироваться
+                    </a>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-icon">🔗</div>
+                    <div class="step-number">3</div>
+                    <h3>Подключитесь к серверу</h3>
+                    <p>В меню "Сетевая игра" добавьте наш сервер используя IP-адрес ниже.</p>
+                    <p><small>Или найдите нас в списке серверов FPlay</small></p>
+                    <p><small>[RU]Forgotten Legends</small></p>
+                </div>
+            </div>
+
+            <!-- IP-адрес сервера -->
+            <div class="server-ip-section">
+                <h2>IP-адрес сервера</h2>
+                <p>Скопируйте этот адрес и вставьте в поле адреса</p>
+                <div class="ip-address" id="serverIp">77.37.236.45:42420</div>
+                <button class="copy-btn" onclick="copyIP()">Скопировать IP</button>
+            </div>
+
+            <!-- Секция Discord -->
+            <div class="discord-section" id="discord">
+                <div class="discord-icon-large">🎮</div>
+                <h2>Присоединяйтесь к нашему Discord</h2>
+                <p>Общайтесь с другими игроками, получайте помощь, участвуйте в событиях и будьте в курсе всех обновлений!</p>
+
+                <div class="discord-widget">
+                    <h3>🎉 Forgotten Legends Community</h3>
+                    <p>👥 1,254 участника</p>
+                    <p>✅ Онлайн: 247 игроков</p>
+                    <p>💬 Активное общение</p>
+                </div>
+
+                <a href="https://discord.gg/forgottenlegends" class="discord-link" target="_blank">
+                    Присоединиться к Discord
+                </a>
+            </div>
+
+            <!-- Секция помощи -->
+            <div class="help-section">
+                <h2>Частые вопросы</h2>
+
+                <div class="faq-item">
+                    <h4>❓ Не могу подключиться к серверу</h4>
+                    <p>Проверьте правильность IP-адреса и порта. Убедитесь, что используете правильную версию игры.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>❓ Сервер требует другую версию</h4>
+                    <p>Проверьте ваш статус активности в левом нижнем углу, если он оффлайн то отключите RadminVPN из за него сервер авторизации выдает ошибку версии.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>❓ Вылетает с ошибкой</h4>
+                    <p>Проверьте актуальные системные требования. Удалите ресурсоемкие клиентские моды.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h4>❓ Где найти помощь?</h4>
+                    <p>Присоединяйтесь к нашему Discord - там администраторы и опытные игроки помогут решить любые проблемы!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Forgotten Legends</h3>
+                    <p>Самая добрая администрация.</p>
+                    <p><small>Присоединяйся к нашему растущему сообществу!</small></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Быстрые ссылки</h3>
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="rules.html">Правила</a></li>
+                        <li><a href="how-to-join.html">Как присоединиться</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p>Email: admin@forgottenlegends.ru</p>
+                    <p>Discord: discord.gg/forgottenlegends</p>
+                    <div class="social-links">
+                        <a href="#">📘</a>
+                        <a href="#">📷</a>
+                        <a href="#">🐦</a>
+                        <a href="#">🎮</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Forgotten Legends.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Копирование IP-адреса
+        function copyIP() {
+            const ipText = document.getElementById('serverIp').textContent;
+            navigator.clipboard.writeText(ipText)
+                .then(() => {
+                    const btn = document.querySelector('.copy-btn');
+                    const originalText = btn.textContent;
+                    btn.textContent = 'Скопировано!';
+                    btn.style.background = '#4CAF50';
+
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                        btn.style.background = '#ff8a00';
+                    }, 2000);
+                })
+                .catch(err => {
+                    alert('Не удалось скопировать IP-адрес');
+                });
+        }
+
+        // Плавная прокрутка
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Анимация появления карточек
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Применяем анимацию к карточкам
+        document.querySelectorAll('.step-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+
+    <script>
+        // Автоматическое определение активной страницы
+        document.addEventListener('DOMContentLoaded', function () {
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('nav ul li a');
+
+            navLinks.forEach(link => {
+                const linkPage = link.getAttribute('href');
+                if (linkPage === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
