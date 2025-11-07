@@ -144,7 +144,7 @@
                         <li><a href="#">Галерея</a></li>
                     </ul>
                 </nav>
-                <a href="https://discord.gg/4eNe2UTQC5" class="discord-btn-custom" target="_blank">
+                <a href="https://discord.gg/forgottenlegends" class="discord-btn-custom" target="_blank">
                     <span class="discord-icon-custom"></span> Discord
                 </a>
             </div>
@@ -248,18 +248,30 @@
                 </div>
                 <div class="footer-section">
                     <h3>Контакты</h3>
-                    <p>Email: admin@forgottenlegends.ru</p>
                     <p>Discord: discord.gg/forgottenlegends</p>
-                    <div class="social-links">
-                        <a href="#">📘</a>
-                        <a href="#">📷</a>
-                        <a href="#">🐦</a>
-                        <a href="#">🎮</a>
-                    </div>
+
+                    <ul class="social-menu">
+                        <li style="--i:#5865f2;--j:#5865f2">
+                            <a href="https://discord.gg/forgottenlegends" target="_blank" style="text-decoration: none;">
+                                <span class="icon">
+                                    <ion-icon name="logo-discord"></ion-icon>
+                                </span>
+                                <span class="social-title">Discord</span>
+                            </a>
+                        </li>
+                        <li style="--i:#0088cc;--j:#0088cc">
+                            <a href="https://t.me/forgottenlegends" target="_blank" style="text-decoration: none;">
+                                <span class="icon">
+                                    <ion-icon name="paper-plane-outline"></ion-icon>
+                                </span>
+                                <span class="social-title">Telegram</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 Forgotten Legends.</p>
+                <p>&copy; 2025 Forgotten Legends. Все права защищены.</p>
             </div>
         </div>
     </footer>
@@ -295,9 +307,7 @@
                 }
             });
         });
-    </script>
 
-    <script>
         // Автоматическое определение активной страницы
         document.addEventListener('DOMContentLoaded', function () {
             const currentPage = window.location.pathname.split('/').pop() || 'index.html';
@@ -312,6 +322,8 @@
         });
     </script>
 
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
 </html>
-
