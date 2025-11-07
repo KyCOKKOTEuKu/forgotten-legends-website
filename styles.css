@@ -1,5 +1,5 @@
 /* styles.css */
-/* Общие стили */
+/* РћР±С‰РёРµ СЃС‚РёР»Рё */
 * {
     margin: 0;
     padding: 0;
@@ -20,7 +20,7 @@ body {
     margin: 0 auto;
 }
 
-/* Стили для шапки */
+/* РЎС‚РёР»Рё РґР»СЏ С€Р°РїРєРё */
 header {
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
     padding: 1rem 0;
@@ -37,7 +37,7 @@ header {
     align-items: center;
 }
 
-/* Огненное свечение для логотипа */
+/* РћРіРЅРµРЅРЅРѕРµ СЃРІРµС‡РµРЅРёРµ РґР»СЏ Р»РѕРіРѕС‚РёРїР° */
 .logo-with-fire {
     position: relative;
     display: flex;
@@ -45,7 +45,7 @@ header {
     gap: 12px;
 }
 
-/* Основная иконка с огненным эффектом */
+/* РћСЃРЅРѕРІРЅР°СЏ РёРєРѕРЅРєР° СЃ РѕРіРЅРµРЅРЅС‹Рј СЌС„С„РµРєС‚РѕРј */
 .logo-icon-fire {
     width: 45px;
     height: 45px;
@@ -59,7 +59,7 @@ header {
     animation: fireGlow 2s ease-in-out infinite alternate;
 }
 
-    /* Псевдоэлемент для дополнительного свечения */
+    /* РџСЃРµРІРґРѕСЌР»РµРјРµРЅС‚ РґР»СЏ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕРіРѕ СЃРІРµС‡РµРЅРёСЏ */
     .logo-icon-fire::before {
         content: '';
         position: absolute;
@@ -73,7 +73,7 @@ header {
         animation: firePulse 1.5s ease-in-out infinite;
     }
 
-/* Текст с огненным эффектом */
+/* РўРµРєСЃС‚ СЃ РѕРіРЅРµРЅРЅС‹Рј СЌС„С„РµРєС‚РѕРј */
 .logo-text-fire {
     font-size: 2rem;
     font-weight: bold;
@@ -87,7 +87,7 @@ header {
     text-shadow: 0 0 10px rgba(255, 107, 0, 0.5), 0 0 20px rgba(255, 138, 0, 0.3), 0 0 30px rgba(255, 170, 0, 0.2);
 }
 
-/* Навигация */
+/* РќР°РІРёРіР°С†РёСЏ */
 nav ul {
     display: flex;
     list-style: none;
@@ -111,7 +111,7 @@ nav ul {
                 background-color: rgba(255, 255, 255, 0.1);
             }
 
-            /* Стили для активной страницы в навигации */
+            /* РЎС‚РёР»Рё РґР»СЏ Р°РєС‚РёРІРЅРѕР№ СЃС‚СЂР°РЅРёС†С‹ РІ РЅР°РІРёРіР°С†РёРё */
             nav ul li a.active {
                 color: #ff8a00;
                 background: rgba(255, 138, 0, 0.15);
@@ -130,7 +130,7 @@ nav ul {
                     border-radius: 2px;
                 }
 
-/* Обычные кнопки */
+/* РћР±С‹С‡РЅС‹Рµ РєРЅРѕРїРєРё */
 .cta-button {
     background: linear-gradient(90deg, #ff8a00, #e52e71);
     color: white;
@@ -149,7 +149,7 @@ nav ul {
         box-shadow: 0 5px 15px rgba(229, 46, 113, 0.4);
     }
 
-/* Стили для кастомной иконки Discord */
+/* РЎС‚РёР»Рё РґР»СЏ РєР°СЃС‚РѕРјРЅРѕР№ РёРєРѕРЅРєРё Discord */
 .discord-btn-custom {
     display: inline-flex;
     align-items: center;
@@ -179,7 +179,7 @@ nav ul {
     background-position: center;
 }
 
-/* Анимация для иконки Discord */
+/* РђРЅРёРјР°С†РёСЏ РґР»СЏ РёРєРѕРЅРєРё Discord */
 .discord-btn-custom:hover .discord-icon-custom {
     animation: discordPulse 0.5s ease-in-out;
 }
@@ -194,7 +194,7 @@ nav ul {
     }
 }
 
-/* Кнопки с неоновым свечением */
+/* РљРЅРѕРїРєРё СЃ РЅРµРѕРЅРѕРІС‹Рј СЃРІРµС‡РµРЅРёРµРј */
 .glow-button {
     width: 220px;
     height: 50px;
@@ -272,7 +272,7 @@ nav ul {
     }
 }
 
-/* Стили для героя секции */
+/* РЎС‚РёР»Рё РґР»СЏ РіРµСЂРѕСЏ СЃРµРєС†РёРё */
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.9)), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
@@ -322,7 +322,7 @@ nav ul {
     color: #ff8a00;
 }
 
-/* Стили для секции "О сервере" */
+/* РЎС‚РёР»Рё РґР»СЏ СЃРµРєС†РёРё "Рћ СЃРµСЂРІРµСЂРµ" */
 .about {
     padding: 5rem 0;
     background-color: #111111;
@@ -371,7 +371,7 @@ nav ul {
     font-size: 1.5rem;
 }
 
-/* Стили для футера */
+/* РЎС‚РёР»Рё РґР»СЏ С„СѓС‚РµСЂР° */
 footer {
     background-color: #050505;
     padding: 3rem 0 1rem;
@@ -418,7 +418,7 @@ footer {
     color: #888;
 }
 
-/* Эффект искр */
+/* Р­С„С„РµРєС‚ РёСЃРєСЂ */
 .fire-sparks {
     position: absolute;
     width: 100%;
@@ -436,7 +436,7 @@ footer {
     animation: sparkFloat 2s ease-out infinite;
 }
 
-/* Анимации для огненного эффекта */
+/* РђРЅРёРјР°С†РёРё РґР»СЏ РѕРіРЅРµРЅРЅРѕРіРѕ СЌС„С„РµРєС‚Р° */
 @keyframes fireGlow {
     0% {
         filter: drop-shadow(0 0 8px #ff6b00) drop-shadow(0 0 15px #ff8a00) drop-shadow(0 0 25px #ffaa00) brightness(1.1);
@@ -497,7 +497,7 @@ footer {
     }
 }
 
-/* Эффект при наведении */
+/* Р­С„С„РµРєС‚ РїСЂРё РЅР°РІРµРґРµРЅРёРё */
 .logo-with-fire:hover .logo-icon-fire {
     animation-duration: 0.5s;
     filter: drop-shadow(0 0 15px #ff8a00) drop-shadow(0 0 30px #ffaa00) drop-shadow(0 0 45px #ffd700) brightness(1.4);
@@ -507,7 +507,7 @@ footer {
     animation-duration: 1s;
 }
 
-/* Адаптивность */
+/* РђРґР°РїС‚РёРІРЅРѕСЃС‚СЊ */
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
@@ -570,5 +570,171 @@ footer {
     nav ul li a {
         padding: 6px 12px;
         font-size: 0.9rem;
+    }
+}
+
+/* РЎС‚РёР»Рё РґР»СЏ 3D РєР°СЂС‚РѕС‡РµРє РїСЂР°РІРёР» */
+.rules-3d-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    perspective: 1000px;
+    margin: 4rem 0;
+}
+
+.rule-card-3d {
+    width: 280px;
+    height: 380px;
+    background: linear-gradient(135deg, #ff6b00, #e52e71);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.6s, box-shadow 0.6s;
+    transform-style: preserve-3d;
+    transform: rotateX(10deg) translateY(-50px) translateZ(-50px);
+    box-shadow: 0 25px 50px rgba(255, 107, 0, 0.3), 0 15px 30px rgba(229, 46, 113, 0.2);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+    .rule-card-3d::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+        transform: translateX(-100%);
+        transition: transform 0.6s;
+    }
+
+    .rule-card-3d:hover {
+        transform: rotateX(0deg) translateY(0) translateZ(0);
+        box-shadow: 0 10px 30px rgba(255, 107, 0, 0.4), 0 5px 15px rgba(229, 46, 113, 0.3);
+    }
+
+        .rule-card-3d:hover::before {
+            transform: translateX(100%);
+        }
+
+    .rule-card-3d:nth-child(1) {
+        background: linear-gradient(135deg, #ff6b00, #ff8a00);
+    }
+
+    .rule-card-3d:nth-child(2) {
+        background: linear-gradient(135deg, #e52e71, #9d4edd);
+    }
+
+    .rule-card-3d:nth-child(3) {
+        background: linear-gradient(135deg, #4361ee, #4cc9f0);
+    }
+
+    .rule-card-3d:nth-child(4) {
+        background: linear-gradient(135deg, #f72585, #7209b7);
+    }
+
+    .rule-card-3d:nth-child(5) {
+        background: linear-gradient(135deg, #ff9e00, #ff6b6b);
+    }
+
+    .rule-card-3d:nth-child(6) {
+        background: linear-gradient(135deg, #06d6a0, #118ab2);
+    }
+
+    .rule-card-3d:nth-child(7) {
+        background: linear-gradient(135deg, #ef476f, #ffd166);
+    }
+
+.rule-icon-3d {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+    transform: translateZ(30px);
+}
+
+.rule-card-3d h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transform: translateZ(20px);
+    font-weight: bold;
+}
+
+.rule-card-3d p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    transform: translateZ(10px);
+}
+
+.rule-number-3d {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    backdrop-filter: blur(10px);
+    transform: translateZ(25px);
+}
+
+/* РђРґР°РїС‚РёРІРЅРѕСЃС‚СЊ РґР»СЏ 3D РєР°СЂС‚РѕС‡РµРє */
+@media (max-width: 1200px) {
+    .rules-3d-container {
+        gap: 30px;
+    }
+
+    .rule-card-3d {
+        width: 250px;
+        height: 350px;
+    }
+}
+
+@media (max-width: 768px) {
+    .rules-3d-container {
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rule-card-3d {
+        width: 300px;
+        height: 200px;
+        transform: rotateX(5deg) translateY(-20px) translateZ(-20px);
+    }
+
+        .rule-card-3d:hover {
+            transform: rotateX(0deg) translateY(0) translateZ(0);
+        }
+}
+
+@media (max-width: 480px) {
+    .rule-card-3d {
+        width: 280px;
+        height: 180px;
+    }
+
+    .rule-icon-3d {
+        font-size: 3rem;
+    }
+
+    .rule-card-3d h3 {
+        font-size: 1.2rem;
+    }
+
+    .rule-card-3d p {
+        font-size: 0.85rem;
     }
 }
